@@ -170,6 +170,10 @@ namespace rmmseg
         {
             return min(3, m_text_length-m_pos);
         }
+        if (ch >= 0xF0)
+        {
+            return min(4, m_text_length - m_pos);
+        }
         return 1;
     }
 
